@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { RxCross1 } from "react-icons/rx";
+import { FaUser } from "react-icons/fa";
 import { Button } from "../index";
 
 const Nav = () => {
@@ -9,10 +10,33 @@ const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Features", navUrl: "/features" },
-    { name: "Benefits", navUrl: "/benefits" },
-    { name: "Testimonials", navUrl: "/testimonials" },
-    { name: "Pricing", navUrl: "/pricing" },
+    {
+      name: "Home",
+      navUrl: "/",
+    },
+    {
+      name: "Features",
+      navUrl: "/features",
+    },
+    {
+      name: "Benefits",
+      navUrl: "/benefits",
+    },
+    {
+      name: "Testimonials",
+      navUrl: "/testimonials",
+    },
+    {
+      name: "Pricing",
+      navUrl: "/pricing",
+    },
+    {
+      name: "Signup",
+      navUrl: "/signup",
+    }, {
+      name: "Login",
+      navUrl : "/login"
+    }
   ];
 
   return (
@@ -21,17 +45,20 @@ const Nav = () => {
       <h1 className="text-2xl font-semibold">Taskpro</h1>
 
       {/* Desktop Nav */}
-      <ul className="hidden md:flex gap-8">
+      <ul className="hidden md:flex items-center gap-6 px-4 py-2">
         {navItems.map((nav) => (
           <li key={nav.name}>
-            <button
+            <Button
               onClick={() => navigate(nav.navUrl)}
-              className="hover:text-amber-400 transition"
+              className="text-white hover:text-amber-400 transition-colors duration-200 text-sm font-medium p-2 bg-transparent hover:cursor-pointer border-none"
             >
               {nav.name}
-            </button>
+            </Button>
           </li>
         ))}
+        <li>
+          <FaUser />
+        </li>
       </ul>
 
       {/* Mobile Menu Button */}
@@ -52,16 +79,16 @@ const Nav = () => {
       {isMenuOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-slate-900/90 backdrop-blur-sm flex flex-col items-center justify-center gap-8 text-lg md:hidden z-40 transition-all duration-300">
           {navItems.map((nav) => (
-            <button
+            <Button
               key={nav.name}
               onClick={() => {
                 setIsMenuOpen(false);
                 navigate(nav.navUrl);
               }}
-              className="text-white hover:text-amber-400 transition text-xl"
+              className="text-white bg-transparent hover:bg-slate-800 p-2 rounded border-none"
             >
               {nav.name}
-            </button>
+            </Button>
           ))}
         </div>
       )}
