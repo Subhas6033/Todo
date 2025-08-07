@@ -13,7 +13,7 @@ A modern and responsive **Todo application** with built-in **authentication** an
 - ✅ **Todo Management**
   - Create, update, and delete tasks
   - Mark tasks as completed
-  - Categorize or filter todos (if applicable)
+  - Categorize or filter todos
 
 - 🔔 **Notification System**
   - Real-time or on-action feedback notifications (e.g., "Todo created", "Login success")
@@ -28,8 +28,8 @@ A modern and responsive **Todo application** with built-in **authentication** an
 - **Frontend**: React, Tailwind CSS
 - **Routing**: React Router
 - **Icons**: React Icons
-- **State Management**: React Hooks / Context API (if used)
-- **Authentication**: (JWT, Firebase, or custom — mention here)
+- **State Management**: Redux Toolkit (RTK)
+- **Authentication**: JWT
 - **Notifications**: Toasts, modals, or custom (e.g., React Toastify)
 
 ---
@@ -40,3 +40,24 @@ A modern and responsive **Todo application** with built-in **authentication** an
    ```bash
    git clone https://github.com/your-username/todo-app.git
    cd todo-app
+
+2. **Install Dependencies**
+
+    ```bash
+    npm install
+
+3. **Set up environment variables**
+- Create a ```.env``` file in the root
+
+- Add variables like :
+
+    ```bash
+    VITE_API_URL=http://localhost:5000
+    VITE_AUTH_SECRET=yourSecretKey 
+    ```
+
+4. **Run the App**
+    ```bash
+    npm run dev && npm run start
+    ```
+
