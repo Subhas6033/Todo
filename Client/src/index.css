@@ -1,4 +1,7 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-    themes: all;
+@plugin "daisyui";
+
+/* Hide the scrollbar */
+::-webkit-scrollbar{
+    display:  none;
 }
