@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "This is an advanced todo app with multiple users and todo managemenet system with notification system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "react",
+    "mongodb"
+  ],
+  "author": "Subhas Mondal",
+  "license": "ISC"
+}
