@@ -57,6 +57,7 @@ A modern and responsive **Todo application** with built-in **authentication** an
     ```
 
 4. **Run the App**
+
     ```bash
     npm run dev && npm run start
     ```
